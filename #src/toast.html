@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('_head.html',{
+"title":"Главная"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('_header.html',{})
+		<main class="page ">
+			<div class="page__container">
+				<div class="_container-block">
+					<div class="tosts">
+						<div class="tosts__wrapper">
+							<!-- Toast success  -->
+							<div class="tost tost_success">
+								<div class="tost__body">
+									<button type="button" class="tost__close  _icon-50"><span tabindex="-1"></span></button>
+									<div class="tost__header">
+										<div class="tost__icon">
+											<img src="img/tosts/success.svg" alt="">
+										</div>
+										<div class="tost__label">Событие завершилось ошибкой</div>
+									</div>
+									<p class="tost__text">
+										Описание события тоста если это необходимо, кратко или не очень кратко — в две небольших строки.
+									</p>
+								</div>
+							</div>
+							<!-- Toast success  -->
+							<!-- Toast fail  -->
+							<div class="tost tost_fail">
+								<div class="tost__body">
+									<button type="button" class="tost__close  _icon-50"><span tabindex="-1"></span></button>
+									<div class="tost__header">
+										<div class="tost__icon">
+											<img src="img/tosts/fail.svg" alt="">
+										</div>
+										<div class="tost__label">Событие завершилось успешно</div>
+									</div>
+									<p class="tost__text">
+										Описание события тоста если это необходимо, кратко или не очень кратко — в две небольших строки.
+									</p>
+								</div>
+							</div>
+							<!-- Toast fail  -->
+							<!-- Toast warn  -->
+							<div class="tost tost_warn">
+								<div class="tost__body">
+									<button type="button" class="tost__close  _icon-50"><span tabindex="-1"></span></button>
+									<div class="tost__header">
+										<div class="tost__icon">
+											<img src="img/tosts/warm.svg" alt="">
+										</div>
+										<div class="tost__label">Событие завершилось ошибкой</div>
+									</div>
+									<p class="tost__text">
+										Описание события тоста если это необходимо, кратко или не очень кратко — в две небольших строки.
+									</p>
+								</div>
+							</div>
+							<!-- Toast warn  -->
+							<!-- Toast info  -->
+							<div class="tost tost_info">
+								<div class="tost__body">
+									<button type="button" class="tost__close  _icon-50"><span tabindex="-1"></span></button>
+									<div class="tost__header">
+										<div class="tost__icon">
+											<img src="img/tosts/info.svg" alt="">
+										</div>
+										<div class="tost__label">Информация к размышлению</div>
+									</div>
+									<p class="tost__text">
+										Описание события тоста если это необходимо, кратко или не очень кратко — в две небольших строки.
+									</p>
+								</div>
+							</div>
+							<!-- Toast info  -->
+							<!-- Toast warn  -->
+							<div class="tost tost_warn">
+								<div class="tost__body">
+									<button type="button" class="tost__close  _icon-50"><span tabindex="-1"></span></button>
+									<div class="tost__header">
+										<div class="tost__icon">
+											<img src="img/tosts/warm.svg" alt="">
+										</div>
+										<div class="tost__label">Событие завершилось ошибкой</div>
+									</div>
+									<p class="tost__text">
+										Описание события тоста если это необходимо, кратко или не очень кратко — в две небольших строки.
+									</p>
+									<a href="#" class="tost__link button button_xs button_outlined"><span>Действие</span></a>
+								</div>
+							</div>
+							<!-- Toast warn  -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		@@include('_footer.html',{})
+	</div>
+	@@include('_popup.html',{})
+	@@include('_js.html',{})
+</body>
+
+</html>

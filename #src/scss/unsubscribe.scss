@@ -1,0 +1,393 @@
+.unsubscribe {
+	// .unsubscribe__main
+	&__main {
+	}
+	// .unsubscribe__menu
+	&__menu {
+	}
+	// .unsubscribe__content
+	&__content {
+		@media (max-width: $md1+px) {
+			padding: 24px 0px 0px 0px;
+		}
+		@media (max-width: $md3+px) {
+			padding: 8px 0px 0px 0px;
+		}
+	}
+}
+.content-unsubscribe {
+	&__container {
+		display: grid;
+		gap: 24px;
+		@media (max-width: $md3+px) {
+			gap: 16px;
+		}
+	}
+	// .content-unsubscribe__header
+	&__header {
+		display: flex;
+		align-items: center;
+		@media (max-width: $md2+px) {
+			display: grid;
+			gap: 16px;
+		}
+	}
+	// .content-unsubscribe__title
+	&__title {
+		flex: 1 1 auto;
+		margin-right: 20px;
+		@media (max-width:$md2+px){
+			margin: 0;
+		}
+		@media (max-width: $md3+px) {
+			font-size: 20px;
+			
+		}
+	}
+	// .content-unsubscribe__search
+	&__search {
+		min-width: 424px;
+
+		@media (max-width: $md2+px) {
+			min-width: auto;
+		}
+	}
+	// .content-unsubscribe__main
+	&__main {
+		display: grid;
+	}
+	&__filter{
+		&:not(:last-child) {padding: 0px 0px 16px 0px;};
+	}
+	// .content-unsubscribe__switcher
+	&__switcher {
+		display: flex;
+		align-items: center;
+	}
+	// .content-unsubscribe__descr
+	&__descr {
+		padding: 0px 0px 0px 8px;
+	}
+	// .content-unsubscribe__footer
+	&__footer {
+	}
+}
+.table-unsubscribe {
+	@media (max-width: $md2+px) {
+		overflow: auto;
+		scrollbar-color: $bg-04 $bg-01;
+		scrollbar-width: thin;
+		padding: 0px 0px 8px 0px;
+		&::-webkit-scrollbar {
+			height: 8px;
+		}
+		&::-webkit-scrollbar-track {
+			background-color: $bg-01;
+		}
+		&::-webkit-scrollbar-thumb {
+			background-color: $bg-04;
+			border-radius: 10px;
+		}
+	}
+	@media (max-width: $md3+px) {
+		margin-bottom: 0px;
+	}
+	@media (max-width: $md4+px) {
+		margin-right: -16px;
+		padding-right: 16px;
+	}
+	// .table-unsubscribe__body
+	&__body {
+		border: 1px solid $bg-04;
+		border-radius: 8px;
+		overflow: hidden;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr) minmax(110px, auto);
+		> * {
+			padding: 5px 15px;
+			&:nth-child(8n) {
+				+ .table-unsubscribe__item {
+					&::after {
+						display: block;
+					}
+				}
+			}
+		}
+		@media (max-width: $md1+px) {
+			grid-template-columns: minmax(166px, auto) repeat(2, 1fr) minmax(110px, auto);
+		}
+		@media (max-width: $md2+px) {
+			grid-template-columns: minmax(133px, auto) repeat(2, 1fr) minmax(110px, auto);
+			min-width: 557px;
+		}
+		@media (max-width: $md3+px) {
+			grid-template-columns: minmax(103px, auto) repeat(2, 1fr) minmax(110px, auto);
+		}
+	}
+	// .table-unsubscribe__title
+	&__title {
+		position: relative;
+		min-height: 46px;
+		display: flex;
+		align-items: center;
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 22px;
+
+		&::before {
+			content: "";
+			position: absolute;
+			right: 0;
+			top: 0;
+			height: 1000vh;
+			width: 1px;
+			background-color: $bg-03;
+			z-index: 1;
+		}
+		&:first-child {
+			position: relative;
+			&::after {
+				content: "";
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 1000vh;
+				height: 100%;
+				background-color: $bg-01;
+			}
+		}
+		&_last {
+			justify-content: center;
+			&::before {
+				content: "";
+				display: none;
+			}
+		}
+		@media (max-width: $md1+px) {
+			min-height: 36px;
+			font-size: 12px;
+		}
+		@media (max-width: $md3+px) {
+			font-size: 12px;
+		}
+	}
+	// .table-unsubscribe__sort
+	&__sort {
+		position: relative;
+		z-index: 1;
+	}
+	// .table-unsubscribe__item
+	&__item {
+		display: flex;
+		align-items: center;
+		min-height: 42px;
+		position: relative;
+		&_status {
+			justify-content: center;
+		}
+		&::after {
+			display: none;
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 1000vh;
+			height: 100%;
+			background-color: $bg-00;
+		}
+		* {
+			z-index: 2;
+		}
+		@media (max-width: $md1+px) {
+			min-height: 32px;
+		}
+	}
+	// .table-unsubscribe__services
+	&__services {
+		font-size: 12px;
+		line-height: 15px;
+		@media (max-width: $md1+px) {
+			font-size: 11px;
+			line-height: 13px;
+		}
+	}
+	// .table-unsubscribe__data
+	&__data {
+		@extend .table-unsubscribe__services;
+	}
+	// .table-unsubscribe__status
+	&__status {
+		@extend .table-unsubscribe__services;
+	}
+	// .table-unsubscribe__actions
+	&__actions {
+	}
+}
+//========================================================================================================================================================
+.table-refunds {
+	@media (max-width: $md2+px) {
+		overflow: auto;
+		scrollbar-color: $bg-04 $bg-01;
+		scrollbar-width: thin;
+		padding: 0px 0px 8px 0px;
+		&::-webkit-scrollbar {
+			height: 8px;
+		}
+		&::-webkit-scrollbar-track {
+			background-color: $bg-01;
+		}
+		&::-webkit-scrollbar-thumb {
+			background-color: $bg-04;
+			border-radius: 10px;
+		}
+	}
+	@media (max-width: $md3+px) {
+		margin-bottom: 0px;
+	}
+	@media (max-width: $md4+px) {
+		margin-right: -16px;
+		padding-right: 16px;
+	}
+	// .table-refunds__body
+	&__body {
+		border: 1px solid $bg-04;
+		border-radius: 8px;
+		overflow: hidden;
+		display: grid;
+		grid-template-columns: minmax(166px, auto) auto 1fr repeat(3, auto);
+		> * {
+			padding: 4px 15px;
+			&:nth-child(12n) {
+				+ .table-refunds__item {
+					&::after {
+						display: block;
+					}
+				}
+			}
+		}
+		@media (max-width: $md1+px) {
+			> * {
+				padding: 4px 15px 4px 7px;
+			}
+		}
+		@media (max-width: $md2+px) {
+			grid-template-columns: minmax(133px, auto) auto 1fr repeat(3, auto);
+			min-width: 720px;
+		}
+		@media (max-width: $md3+px) {
+			grid-template-columns: minmax(103px, auto) auto 1fr repeat(3, auto);
+		}
+	}
+	// .table-refunds__title
+	&__title {
+		position: relative;
+		min-height: 68px;
+		display: flex;
+		align-items: center;
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 22px;
+		&::before {
+			content: "";
+			position: absolute;
+			right: 0;
+			top: 0;
+			height: 1000vh;
+			width: 1px;
+			background-color: $bg-03;
+			z-index: 1;
+		}
+		&:first-child {
+			position: relative;
+			&::after {
+				content: "";
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 1000vh;
+				height: 100%;
+				background-color: $bg-01;
+			}
+		}
+		&_last {
+			justify-content: center;
+			&::before {
+				content: "";
+				display: none;
+			}
+		}
+		@media (max-width: $md1+px) {
+			min-height: 58px;
+			font-size: 12px;
+			&:first-child {
+				padding: 4px 15px;
+			}
+		}
+		@media (max-width: $md3+px) {
+			font-size: 12px;
+		}
+	}
+	// .table-refunds__sort
+	&__sort {
+		position: relative;
+		z-index: 1;
+	}
+	// .table-refunds__item
+	&__item {
+		display: flex;
+		align-items: center;
+		min-height: 42px;
+		position: relative;
+		&_status {
+			justify-content: center;
+		}
+		&::after {
+			display: none;
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 1000vh;
+			height: 100%;
+			background-color: $bg-00;
+		}
+		* {
+			z-index: 2;
+		}
+		@media (max-width: $md1+px) {
+			min-height: 32px;
+			&_status,
+			&_services {
+				padding: 4px 15px;
+			}
+		}
+	}
+	// .table-refunds__services
+	&__services {
+		font-size: 12px;
+		line-height: 15px;
+		@media (max-width: $md1+px) {
+			font-size: 11px;
+			line-height: 13px;
+		}
+	}
+	// .table-refunds__card
+	&__card {
+		@extend .table-refunds__services;
+	}
+	// .table-refunds__reason
+	&__reason {
+		@extend .table-refunds__services;
+	}
+	// .table-refunds__data
+	&__data {
+		@extend .table-refunds__services;
+	}
+	// .table-refunds__status
+	&__status {
+		@extend .table-refunds__services;
+	}
+	// .table-refunds__actions
+	&__actions {
+	}
+}

@@ -1,0 +1,807 @@
+.vakil-page {
+	// .vakil-page_profile
+	&_profile {
+	}
+	// .vakil-page__section
+	&__section {
+	}
+	// .vakil-page__title
+	&__title {
+		font-weight: 500;
+		font-size: 22px;
+		line-height: 27px;
+		@media (max-width: $md3+px) {
+			font-size: 20px;
+			line-height: 28px;
+		}
+	}
+	&__label {
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 22px;
+		letter-spacing: 0.01em;
+	}
+	// .vakil-page__wrapper
+	&__wrapper {
+		display: grid;
+		gap: 64px;
+		.forms-block {
+			.main-form {
+				.main-form__block_border-bottom {
+					position: relative;
+					&::before {
+						content: "";
+						position: absolute;
+						top: calc(100% + 32px);
+						left: 0;
+						height: 1px;
+						background-color: $bg-04;
+						width: 100%;
+					}
+				}
+			}
+		}
+		@media (max-width: $md1+px) {
+			padding: 24px 0px 0px 0px;
+		}
+		@media (max-width: $md2+px) {
+			padding: 8px 0px 0px 0px;
+			gap: 48px;
+			.forms-block {
+				.main-form {
+					.main-form__block_border-bottom {
+						&::before {
+							top: calc(100% + 24px);
+						}
+					}
+				}
+			}
+		}
+		@media (max-width: $md3+px) {
+			gap: 32px;
+			.forms-block {
+				.main-form {
+					.main-form__block_border-bottom {
+						&::before {
+							top: calc(100% + 16px);
+						}
+					}
+				}
+			}
+		}
+	}
+
+	// .vakil-page__content-unsubscribe
+	&__content-unsubscribe {
+	}
+}
+//========================================================================================================================================================
+.vakil-block {
+	&__title {
+		font-weight: 500;
+		font-size: 22px;
+		line-height: 27px;
+	}
+	@media (max-width: $md3+px) {
+		&__title {
+			font-size: 20px;
+			line-height: 28px;
+		}
+	}
+}
+//========================================================================================================================================================
+.chat-control {
+	// .chat-control__container
+	&__container {
+		display: grid;
+		gap: 24px;
+	}
+	// .chat-control__title
+	&__title {
+	}
+	// .chat-control__label
+	&__label {
+	}
+	// .chat-control__table
+	&__table {
+		display: grid;
+		gap: 24px;
+	}
+	// .chat-control__form
+	&__form {
+	}
+
+	@media (max-width: $md3+px) {
+		&__container {
+			gap: 16px;
+		}
+		&__table {
+			gap: 16px;
+		}
+	}
+}
+.form-chat-control {
+	display: grid;
+	grid-template-columns: minmax(355px, auto) 1fr auto;
+	align-items: flex-end;
+	gap: 32px;
+	// .form-chat-control__select
+	&__select {
+	}
+	// .form-chat-control__input
+	&__input {
+		position: relative;
+		.input__error {
+			position: absolute;
+			top: 100%;
+			left: 0;
+		}
+	}
+	// .form-chat-control__button
+	&__button {
+		margin-bottom: 2px;
+	}
+	@media (max-width: 1200px) {
+		grid-template-columns: 1fr 1fr auto;
+		gap: 24px;
+	}
+	@media (max-width: $md2+px) {
+		grid-template-columns: 1fr;
+		// .form-chat-control__input
+		&__input {
+			.input__error {
+				position: relative;
+			}
+		}
+		// .form-chat-control__button
+		&__button {
+			margin-bottom: 0px;
+		}
+	}
+}
+//========================================================================================================================================================
+.button-control {
+	// .button-control__container
+	&__container {
+		display: grid;
+		gap: 24px;
+	}
+	// .button-control__title
+	&__title {
+	}
+	// .button-control__actions
+	&__actions {
+		display: flex;
+		align-items: center;
+	}
+	// .button-control__switcher
+	&__switcher {
+		display: flex;
+		align-items: center;
+		&:not(:last-child) {
+			margin: 0px 32px 0px 0px;
+		}
+	}
+	// .button-control__descr
+	&__descr {
+		margin-left: 32px;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: math.div(20px, 16px) * 100%;
+	}
+	// .button-control__row
+	&__row {
+		.options {
+			display: flex;
+			align-items: center;
+			flex-direction: row;
+			padding: 16px;
+			padding-right: 24px;
+			background-color: $bg-01;
+			border-radius: 60px;
+			.options__item {
+				&:not(:last-child) {
+					margin: 0px 16px 0px 0px;
+				}
+			}
+		}
+	}
+	// .button-control__text
+	&__text {
+	}
+	@media (max-width: $md2+px) {
+		&__switcher {
+			&:not(:last-child) {
+				margin: 0px 0px 0px 0px;
+			}
+		}
+		&__descr {
+			margin-left: 24px;
+		}
+		&__actions {
+			display: grid;
+			gap: 24px;
+			justify-content: start;
+		}
+	}
+	@media (max-width: $md3+px) {
+		&__actions {
+			justify-content: stretch;
+		}
+		&__switcher {
+			&:not(:last-child) {
+				margin: 0px 0px 0px 0px;
+			}
+		}
+		&__title {
+			font-size: 20px;
+			line-height: 28px;
+		}
+		&__descr {
+			margin-left: 8px;
+			@media (max-width: $md3+px) {
+				font-size: 14px;
+				line-height: 20px;
+			}
+		}
+		&__row {
+			width: 100%;
+			.options {
+				display: grid;
+				gap: 16px;
+				flex-direction: row;
+				padding: 16px;
+				padding-right: 24px;
+				background-color: $bg-01;
+				border-radius: 16px;
+				.options__item {
+					&:not(:last-child) {
+						margin: 0px 0px 0px 0px;
+					}
+				}
+			}
+		}
+	}
+}
+//========================================================================================================================================================
+.replenish-account {
+	// .replenish-account__container
+	&__container {
+		display: grid;
+		gap: 24px;
+	}
+	// .replenish-account__title
+	&__title {
+	}
+	// .replenish-account__form
+	&__form {
+	}
+	// .replenish-account__table
+	&__table {
+	}
+}
+
+.form-replenish-account {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 32px;
+	align-items: end;
+	// .form-replenish-account__input
+	&__input {
+		position: relative;
+		.input__value {
+			&::after {
+				content: "₽";
+				font-weight: 300;
+				font-size: 16px;
+				line-height: 26px;
+				display: block;
+				background-color: red;
+			}
+		}
+		.input__error {
+			position: absolute;
+			top: 100%;
+			left: 0;
+		}
+	}
+	// .form-replenish-account__button
+	&__button {
+		margin-bottom: 2px;
+	}
+	@media (max-width: $md2+px) {
+		gap: 24px;
+	}
+	@media (max-width: $md3+px) {
+		grid-template-columns: 1fr;
+		gap: 16px;
+		// .form-replenish-account__input
+		&__input {
+			.input__error {
+				position: relative;
+			}
+		}
+		// .form-replenish-account__button
+		&__button {
+			margin-bottom: 0px;
+		}
+	}
+}
+//========================================================================================================================================================
+.payment {
+	// .payment__container
+	&__container {
+		display: grid;
+		gap: 24px;
+	}
+	// .payment__title
+	&__title {
+	}
+	// .payment__wrapper
+	&__wrapper {
+		display: grid;
+		grid-template-columns: 352px 1fr;
+		gap: 32px;
+		align-items: start;
+	}
+	// .payment__column
+	&__column {
+	}
+	// .payment__label
+	&__label {
+		font-weight: 500;
+		font-size: 18px;
+		line-height: math.div(22px, 18px) * 100%;
+		letter-spacing: 0.01em;
+		&:not(:last-child) {
+			margin: 0px 0px 16px 0px;
+		}
+	}
+	// .payment__main
+	&__main {
+	}
+	@media (max-width: 1300px) {
+		// .payment__wrapper
+		&__wrapper {
+			grid-template-columns: 1fr;
+			gap: 64px;
+		}
+	}
+	@media (max-width: $md2+px) {
+		// .payment__wrapper
+		&__wrapper {
+			gap: 32px;
+		}
+	}
+	@media (max-width: $md3+px) {
+		// .payment__container
+		&__container {
+			gap: 16px;
+		}
+		// .payment__title
+		&__title {
+			font-size: 20px;
+			line-height: 28px;
+		}
+		// .payment__label
+		&__label {
+			font-size: 16px;
+		}
+		// .payment__wrapper
+		&__wrapper {
+			gap: 24px;
+		}
+		// .payment__column
+		&__column {
+			.card-tariff-plans {
+				.card-tariff-plans__header {
+					min-height: 52px;
+				}
+				.card-tariff-plans__title {
+					font-size: 14px;
+					line-height: 20px;
+				}
+			}
+		}
+	}
+}
+.main-payment {
+	// .main-payment__form
+	&__form {
+		display: grid;
+		gap: 32px;
+	}
+	// .main-payment__section
+	&__section {
+		display: grid;
+		// .main-payment__section_grid-16
+		&_grid-16 {
+			gap: 16px;
+		}
+		// .main-payment__section_grid-8
+		&_grid-8 {
+			gap: 8px;
+		}
+		// .main-payment__section_footer
+		&_footer {
+			grid-template-columns: repeat(2, 1fr);
+			gap: 16px;
+			align-items: center;
+		}
+	}
+	// .main-payment__cards
+	&__cards {
+	}
+
+	// .main-payment__requisites
+	&__requisites {
+	}
+	// .main-payment__checkbox
+	&__checkbox {
+		justify-self: start;
+	}
+	// .main-payment__desc
+	&__desc {
+		font-weight: 300;
+		font-size: 12px;
+		line-height: 19px;
+	}
+	// .main-payment__total
+
+	// .main-payment__text
+	&__text {
+	}
+	// .main-payment__value
+	&__value {
+	}
+	// .main-payment__button
+	&__button {
+	}
+	@media (max-width: 1300px) {
+		// .main-payment__section
+		&__section {
+			// .main-payment__section_grid-16
+			&_grid-16 {
+				gap: 32px;
+			}
+			// .main-payment__section_grid-8
+			&_grid-8 {
+				gap: 8px;
+			}
+		}
+	}
+	@media (max-width: $md3+px) {
+		// .main-payment__form
+		&__form {
+			gap: 22px;
+		}
+		// .main-payment__section
+		&__section {
+			display: grid;
+			// .main-payment__section_grid-16
+			&_grid-16 {
+				gap: 22px;
+			}
+		}
+		// .main-payment__total
+		&__total {
+			font-size: 20px;
+			line-height: 28px;
+		}
+		// .main-payment__cards
+		&__cards {
+			grid-template-columns: 1fr;
+			gap: 16px;
+		}
+	}
+}
+.section-payment-footer {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 16px;
+	align-items: center;
+	// .section-payment-footer__total
+	&__total {
+		font-weight: 500;
+		font-size: 22px;
+		line-height: 27px;
+		color: $dark-blue;
+	}
+	// .section-payment-footer__button
+	&__button {
+	}
+	@media (max-width: 1300px) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	@media (max-width: $md2+px) {
+		grid-template-columns: 1fr;
+	}
+}
+
+.cards-main-payment {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 16px;
+	// .cards-main-payment__card
+	&__card {
+	}
+	@media (max-width: $md3+px) {
+		grid-template-columns: 1fr;
+		gap: 16px;
+	}
+}
+.card-main-payment {
+	background-color: #fff;
+	padding: 14px;
+	box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.06);
+	border-radius: 16px;
+	display: grid;
+	grid-template-columns: 44px 1fr auto;
+	align-items: center;
+	column-gap: 16px;
+	border: 2px solid transparent;
+	transition: box-shadow 0.3s ease 0s;
+	cursor: pointer;
+	&._active {
+		border: 2px solid $bg-04;
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.12);
+		}
+	}
+	// .card-main-payment__icon
+	&__icon {
+		height: 44px;
+		width: 44px;
+		img {
+			max-width: 100%;
+			max-height: 100%;
+			object-fit: cover;
+		}
+	}
+	// .card-main-payment__number
+	&__number {
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 20px;
+	}
+	// .card-main-payment__term
+	&__term {
+		@extend .card-main-payment__number;
+	}
+	@media (max-width: $md4+px) {
+		&__number {
+			max-width: 105px;
+		}
+	}
+}
+
+.requisites-payment {
+	// .requisites-payment__label
+	&__label {
+	}
+	// .requisites-payment__body
+	&__body {
+	}
+	// .requisites-payment__image
+	&__image {
+		width: 546px;
+		height: 482px;
+		margin: 0px auto;
+		position: relative;
+		img {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			object-fit: contain;
+		}
+	}
+	@media (max-width: $md2+px) {
+		// .requisites-payment__image
+		&__image {
+			width: 437px;
+			height: 386px;
+		}
+	}
+	@media (max-width: $md3+px) {
+		&__body {
+			margin: 0px -16px;
+		}
+		// .requisites-payment__image
+		&__image {
+			width: 100%;
+			height: 287px;
+		}
+	}
+}
+//========================================================================================================================================================
+.payment-page {
+	// .payment-page__container
+	&__container {
+	}
+	// .payment-page__form
+	&__form {
+		display: grid;
+		gap: 24px;
+	}
+	&__label {
+		margin-bottom: 24px;
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 22px;
+		letter-spacing: 0.01em;
+	}
+	// .payment-page__section
+	&__section {
+		// .payment-page__section_grid-32
+		&_grid-32 {
+			display: grid;
+			gap: 32px;
+		}
+	}
+	// .payment-page__title
+	&__title {
+	}
+	// .payment-page__cards
+	&__cards {
+	}
+	// .payment-page__methods
+	&__methods {
+	}
+	// .payment-page__agreement
+	&__agreement {
+		display: grid;
+		gap: 8px;
+		.checkbox {
+			justify-self: start;
+		}
+		.checkbox__text {
+			&::before {
+				margin-right: 16px;
+			}
+		}
+	}
+	// .payment-page__desc
+	&__desc {
+		font-weight: 300;
+		font-size: 12px;
+		line-height: 19px;
+	}
+	// .payment-page__footer
+	&__footer {
+	}
+	@media (max-width: $md3+px) {
+		// .payment-page__form
+		&__form {
+			gap: 16px;
+		}
+		&__label {
+			margin-bottom: 16px;
+			font-size: 16px;
+			line-height: 20px;
+		}
+		// .payment-page__section
+		&__section {
+			// .payment-page__section_grid-32
+			&_grid-32 {
+				gap: 24px;
+			}
+		}
+	}
+}
+.payment-methods {
+	// .payment-methods__label
+	&__label {
+	
+		&:not(:last-child) {
+			margin: 0px 0px 16px 0px;
+		}
+	}
+	// .payment-methods__items
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, 160px);
+		gap: 32px;
+	}
+	// .payment-methods__item
+	&__item {
+	}
+	@media (max-width: 1300px) {
+		// .payment-methods__items payment-page
+		&__items {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, 190px);
+			column-gap: 24px;
+			row-gap: 16px;
+		}
+	}
+	@media (max-width: $md2+px) {
+		// .payment-methods__items
+		&__items {
+			grid-template-columns: repeat(auto-fit, 160px);
+			gap: 16px;
+		}
+	}
+	@media (max-width: $md3+px) {
+		// .payment-methods__items
+		&__items {
+			grid-template-columns: repeat(auto-fit, 136px);
+			gap: 16px;
+		}
+	}
+	@media (max-width: $md4+px) {
+		// .payment-methods__items
+		&__items {
+			justify-content: center;
+		}
+	}
+}
+.item-payment-method {
+	display: grid;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	text-align: center;
+	row-gap: 16px;
+	padding: 6px;
+	height: 100%;
+	background-color: #fff;
+	box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.06);
+	border-radius: 20px;
+	min-height: 160px;
+	transition: box-shadow 0.3s ease 0s;
+	border: 2px solid transparent;
+	&._active {
+		border: 2px solid $bg-03;
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.13);
+		}
+	}
+	// .item-payment-method__icon
+	&__icon {
+	}
+	// .item-payment-method__name
+	&__name {
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 22px;
+		@extend ._dark-blue;
+	}
+	@media (max-width: 1300px) {
+		min-height: 190px;
+	}
+	@media (max-width: $md2+px) {
+		min-height: 150px;
+	}
+	@media (max-width: $md3+px) {
+		@media (max-width: $md2+px) {
+			min-height: 136px;
+		}
+	}
+}
+.section-payment-footer {
+	// .section-payment-footer__total
+	&__total {
+	}
+	// .section-payment-footer__button
+	&__button {
+	}
+	@media (max-width: 1300px) {
+		.button {
+			min-height: 44px;
+		}
+	}
+}
+.main-payment {
+	// .main-payment__text
+	&__text {
+	}
+	// .main-payment__value
+	&__value {
+	}
+}

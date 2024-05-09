@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('_head.html',{
+"title":"ЛК представитель - модерация отзывов"
+})
+
+<body>
+	<div class="wrapper ">
+		@@include('_header-user.html',{})
+		<main class="page ">
+			<div class="page__container">
+				<!-- vakil-page -->
+				<div class="vakil-page vakil-page_profile _page-p-bottom">
+					<!-- main-profile -->
+					<div class="vakil-page__section main-profile">
+						<div class="main-profile__bg _ibg">
+							<img src="img/home/04.jpg" alt="">
+							<img src="img/home/04_320-profile.jpg" alt="">
+						</div>
+						<div class="main-profile__container _container-block">
+							<div class="main-profile__content ">
+								<div class="main-profile__avatar ">
+									<img src="img/photo-item.jpg" alt="">
+								</div>
+								<div class="main-profile__body body-main-profile body-main-profile_full">
+									<div class="body-main-profile__info info-body-profile">
+										<h3 class="info-body-profile__name">Francis Mullins</h3>
+										<div data-da=".main-profile__container,959.98," class="info-body-profile__about about-info-body-profile">
+											<div class="about-info-body-profile__icon _icon-63"></div>
+											<div class="about-info-body-profile__content">
+												<div class="about-info-body-profile__text">Представитель <a href="#" class="_link-hover">GameSport</a></div>
+												<div class="about-info-body-profile__text">Тариф GOLD до 12.12.2021 <a href="#" class="_link-hover">Продлить</a></div>
+											</div>
+										</div>
+									</div>
+									<div data-da=".info-body-profile,959.98," class="body-main-profile__balance balance-main-profile">
+										<div class="balance-main-profile__label _caption">Баланс:</div>
+										<div class="balance-main-profile__body">
+											<div class="balance-main-profile__value">23 000 ₽</div>
+											<a href="" class="balance-main-profile__replenish "><span>Пополнить</span><span class="_icon-50"></span></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- main-profile -->
+					<!-- ambassador-menu -->
+					<div class="vakil-page__section ambassador-menu">
+						<div class="ambassador-menu__container _container-block">
+							<div class="ambassador-menu__body">
+								<button type="button" class="ambassador-menu__button button-ambassador-menu">
+									<span class="button-ambassador-menu__text">Профиль</span>
+									<span class="button-ambassador-menu__burger  button-ambassador-menu__burger_notice"><img src="img/burger-menu.svg" alt=""></span>
+								</button>
+								<div class="ambassador-menu__content">
+									<ul class="ambassador-menu__list">
+										<li class="ambassador-menu__item">
+											<a href="#" class="chips ">
+												<div class="chips__text">Профиль</div>
+											</a>
+										</li>
+										<li class="ambassador-menu__item">
+											<a href="#" class="chips ">
+												<div class="chips__text">Команда</div>
+											</a>
+										</li>
+										<li class="ambassador-menu__item">
+											<a href="#" class="chips">
+												<div class="chips__text">Отписки</div>
+												<div class="chips__value">23</div>
+											</a>
+										</li>
+										<li class="ambassador-menu__item">
+											<a href="#" class="chips ">
+												<div class="chips__text">Возвраты</div>
+												<div class="chips__value">23</div>
+											</a>
+										</li>
+										<li class="ambassador-menu__item">
+											<a href="#" class="chips">
+												<div class="chips__text">Чат</div>
+											</a>
+										</li>
+										<li class="ambassador-menu__item">
+											<a href="#" class="chips _active">
+												<div class="chips__text">Отзывы</div>
+												<div class="chips__value">23</div>
+											</a>
+										</li>
+										<li class="ambassador-menu__item">
+											<a href="#" class="chips">
+												<div class="chips__text">Кнопка</div>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- ambassador-menu -->
+					<!-- vakil-page__wrapper -->
+					<div class="vakil-page__wrapper">
+						<div class="vakil-page__content-unsubscribe content-unsubscribe">
+							<div class="content-unsubscribe__container _container-block">
+								<div class="content-unsubscribe__header">
+									<h5 class="content-unsubscribe__title">Пользователи команды</h5>
+									<div class="content-unsubscribe__search">
+										<div class="search-services">
+											<div class="search-services__body">
+												<div class="search-services__main">
+													<form action="" class="search-services__form">
+														<div class="search-services__input input">
+															<div class="input__line input__line_flex">
+																<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" data-value="Поиск" class="input__value _req">
+																<button type="button" class="input__button _search-services-button _search-services-open  button_icon"><span tabindex="-1"></span></button>
+															</div>
+														</div>
+													</form>
+													<div class="search-services__results results-search-services">
+														<div class="results-search-services__body _grid-32">
+
+														</div>
+													</div>
+												</div>
+
+											</div>
+
+										</div>
+									</div>
+								</div>
+								<div class="content-unsubscribe__main">
+									<!--_content-filter  -->
+									<div class="content-unsubscribe__filter _content-filter">
+										<a href="" class="_content-filter__item _active">Все</a>
+										<a href="" class="_content-filter__item">Новые</a>
+										<a href="" class="_content-filter__item">Одобренные</a>
+										<a href="" class="_content-filter__item">Отклонённые</a>
+									</div>
+									<!--_content-filter  -->
+									<!-- table-block-->
+									<div class="table-block table-block_reviews">
+										<div class="table-block__body">
+											<!-- title -->
+											<div class="table-block__title ">
+												<a href="#" class="table-block__sort _sort-item _sort-item_active  _dark-blue">Дата</a>
+											</div>
+											<div class="table-block__title">
+												<a href="#" class="table-block__sort _sort-item _sort-item_default _dark-blue">Автор</a>
+											</div>
+											<div class="table-block__title">
+												<a href="#" class="table-block__sort  _dark-blue">Текст</a>
+											</div>
+											<div class="table-block__title">
+												<a href="#" class="table-block__sort  _dark-blue">Маскир. IP</a>
+											</div>
+											<div class="table-block__title ">
+												<a href="#" class="table-block__sort  _dark-blue">Статус</a>
+											</div>
+											<div class="table-block__title ">
+												<a href="#" class="table-block__sort  _dark-blue">Модератор</a>
+											</div>
+
+											<div class="table-block__title">
+												<a href="#" class="table-block__sort _sort-item _sort-item_default  _dark-blue">Дата модерации</a>
+											</div>
+											<div class="table-block__title table-block__title_last">
+												<a href="#" class="table-block__sort  _dark-blue">Действия</a>
+											</div>
+											<!-- title -->
+											<!-- row -->
+											<div class="table-block__item table-block__item_first">
+												<span class=" table-block__value table-block__value_data">12.12.2021 - 16:36</span>
+											</div>
+											<div class="table-block__item ">
+												<a href="#" class="table-block__link  table-block__link_name _link-hover">Alice Franklin</a>
+											</div>
+											<div class="table-block__item ">
+												<span data-tippy-content="Мой ребёнок — дебил! Не, ну представьте — малохольный утырок спёр карту и оплатил сервис! На вас одна надежда, родимые, выручайте!" class="table-block__value table-block__value_cause">Не следует, однако забывать, что начало ...</span>
+											</div>
+											<div class="table-block__item">
+												<span class=" table-block__value table-block__value_ip">192.168.0.1</span>
+											</div>
+											<div class="table-block__item ">
+												<span class="table-block__value table-block__value_status ">Ожидание</span>
+											</div>
+											<div class="table-block__item ">
+												<a class="table-block__link  table-block__link_name _link-hover">—</a>
+											</div>
+											<div class="table-block__item ">
+												<span class="table-block__value table-block__value_data">—</span>
+											</div>
+											<div class="table-block__item table-block__item_jc table-block__item_last">
+												<div class="table-block__actions">
+													<a href="#" class="_status _status_no "></a>
+													<a href="#" class="_status _status_active "></a>
+												</div>
+											</div>
+											<!-- row -->
+											<!-- row -->
+											<div class="table-block__item table-block__item_first">
+												<span class=" table-block__value table-block__value_data">12.12.2021 - 16:36</span>
+											</div>
+											<div class="table-block__item ">
+												<a href="#" class="table-block__link  table-block__link_name _link-hover">Blake Fletcher</a>
+											</div>
+											<div class="table-block__item ">
+												<span data-tippy-content="Мой ребёнок — дебил! Не, ну представьте — малохольный утырок спёр карту и оплатил сервис! На вас одна надежда, родимые, выручайте!" class="table-block__value table-block__value_cause">Не следует, однако забывать, что начало ...</span>
+											</div>
+											<div class="table-block__item">
+												<span class=" table-block__value table-block__value_ip">255.255.255.255</span>
+											</div>
+											<div class="table-block__item ">
+												<span class="table-block__value table-block__value_status">Ожидание</span>
+											</div>
+											<div class="table-block__item ">
+												<a class="table-block__link  table-block__link_name _link-hover">—</a>
+											</div>
+											<div class="table-block__item ">
+												<span class="table-block__value table-block__value_data">—</span>
+											</div>
+											<div class="table-block__item table-block__item_jc table-block__item_last">
+												<div class="table-block__actions">
+													<a href="#" class="_status _status_no "></a>
+													<a href="#" class="_status _status_active "></a>
+												</div>
+											</div>
+											<!-- row -->
+											<!-- row -->
+											<div class="table-block__item table-block__item_first">
+												<span class=" table-block__value table-block__value_data">12.12.2021 - 16:36</span>
+											</div>
+											<div class="table-block__item ">
+												<a href="#" class="table-block__link  table-block__link_name _link-hover">Alice Franklin</a>
+											</div>
+											<div class="table-block__item ">
+												<span data-tippy-content="Мой ребёнок — дебил! Не, ну представьте — малохольный утырок спёр карту и оплатил сервис! На вас одна надежда, родимые, выручайте!" class="table-block__value table-block__value_cause">Не следует, однако забывать, что начало ...</span>
+											</div>
+											<div class="table-block__item">
+												<span class=" table-block__value table-block__value_ip">192.168.0.1</span>
+											</div>
+											<div class="table-block__item ">
+												<span class="table-block__value table-block__value_status">Ожидание</span>
+											</div>
+											<div class="table-block__item ">
+												<a class="table-block__link  table-block__link_name _link-hover">—</a>
+											</div>
+											<div class="table-block__item ">
+												<span class="table-block__value table-block__value_data">—</span>
+											</div>
+											<div class="table-block__item table-block__item_jc table-block__item_last">
+												<div class="table-block__actions">
+													<a href="#" class="_status _status_no "></a>
+													<a href="#" class="_status _status_active "></a>
+												</div>
+											</div>
+											<!-- row -->
+											<!-- row -->
+											<div class="table-block__item table-block__item_first">
+												<span class=" table-block__value table-block__value_data">12.12.2021 - 16:36</span>
+											</div>
+											<div class="table-block__item ">
+												<a href="#" class="table-block__link  table-block__link_name _link-hover">Blake Fletcher</a>
+											</div>
+											<div class="table-block__item ">
+												<span data-tippy-content="Мой ребёнок — дебил! Не, ну представьте — малохольный утырок спёр карту и оплатил сервис! На вас одна надежда, родимые, выручайте!" class="table-block__value table-block__value_cause">Не следует, однако забывать, что начало ...</span>
+											</div>
+											<div class="table-block__item">
+												<span class=" table-block__value table-block__value_ip">255.255.255.255</span>
+											</div>
+											<div class="table-block__item ">
+												<span class="table-block__value table-block__value_status">Ожидание</span>
+											</div>
+											<div class="table-block__item ">
+												<a class="table-block__link  table-block__link_name _link-hover">—</a>
+											</div>
+											<div class="table-block__item ">
+												<span class="table-block__value table-block__value_data">—</span>
+											</div>
+											<div class="table-block__item table-block__item_jc table-block__item_last">
+												<div class="table-block__actions">
+													<a href="#" class="_status _status_no "></a>
+													<a href="#" class="_status _status_active "></a>
+												</div>
+											</div>
+											<!-- row -->
+											<!-- row -->
+											<div class="table-block__item table-block__item_first">
+												<span class=" table-block__value table-block__value_data">12.12.2021 - 16:36</span>
+											</div>
+											<div class="table-block__item ">
+												<a href="#" class="table-block__link  table-block__link_name _link-hover">Dewey Myers</a>
+											</div>
+											<div class="table-block__item ">
+												<span data-tippy-content="Мой ребёнок — дебил! Не, ну представьте — малохольный утырок спёр карту и оплатил сервис! На вас одна надежда, родимые, выручайте!" class="table-block__value table-block__value_cause _fail">Suka, blyat!</span>
+											</div>
+											<div class="table-block__item">
+												<span class=" table-block__value table-block__value_ip">192.168.0.1</span>
+											</div>
+											<div class="table-block__item ">
+												<span class="table-block__value table-block__value_status _fail">Отклонен</span>
+											</div>
+											<div class="table-block__item ">
+												<a href="#" class="table-block__link  table-block__link_name _link-hover">Dewey Myers</a>
+											</div>
+											<div class="table-block__item ">
+												<span class="table-block__value table-block__value_data">12.12.2021 - 16:36</span>
+											</div>
+											<div class="table-block__item table-block__item_jc table-block__item_last">
+												<div class="table-block__actions">
+													<a href="#" class="_status _status_no _status_disabled"></a>
+													<a href="#" class="_status _status_active "></a>
+												</div>
+											</div>
+											<!-- row -->
+											<!-- row -->
+											<div class="table-block__item table-block__item_first">
+												<span class=" table-block__value table-block__value_data">12.12.2021 - 16:36</span>
+											</div>
+											<div class="table-block__item ">
+												<a href="#" class="table-block__link  table-block__link_name _link-hover">Essie Benson</a>
+											</div>
+											<div class="table-block__item ">
+												<span data-tippy-content="Мой ребёнок — дебил! Не, ну представьте — малохольный утырок спёр карту и оплатил сервис! На вас одна надежда, родимые, выручайте!" class="table-block__value table-block__value_cause _success">Не следует, однако забывать, что начало ...</span>
+											</div>
+											<div class="table-block__item">
+												<span class=" table-block__value table-block__value_ip">255.255.255.255</span>
+											</div>
+											<div class="table-block__item ">
+												<span class="table-block__value table-block__value_status _success">Одобрен</span>
+											</div>
+											<div class="table-block__item ">
+												<a href="#" class="table-block__link  table-block__link_name _link-hover">Dewey Myers</a>
+											</div>
+											<div class="table-block__item ">
+												<span class="table-block__value table-block__value_data">12.12.2021 - 16:36</span>
+											</div>
+											<div class="table-block__item table-block__item_jc table-block__item_last">
+												<div class="table-block__actions">
+													<a href="#" class="_status _status_no "></a>
+													<a href="#" class="_status _status_active _status_disabled"></a>
+												</div>
+											</div>
+											<!-- row -->
+											<!-- row -->
+											<div class="table-block__item table-block__item_first">
+												<span class=" table-block__value table-block__value_data">12.12.2021 - 16:36</span>
+											</div>
+											<div class="table-block__item ">
+												<a href="#" class="table-block__link  table-block__link_name _link-hover">Sandra Ingram</a>
+											</div>
+											<div class="table-block__item ">
+												<span data-tippy-content="Мой ребёнок — дебил! Не, ну представьте — малохольный утырок спёр карту и оплатил сервис! На вас одна надежда, родимые, выручайте!" class="table-block__value table-block__value_cause _fail">Украли деньги, сволочи!</span>
+											</div>
+											<div class="table-block__item">
+												<span class=" table-block__value table-block__value_ip">192.168.0.1</span>
+											</div>
+											<div class="table-block__item ">
+												<span class="table-block__value table-block__value_status _success">Одобрен</span>
+											</div>
+											<div class="table-block__item ">
+												<a href="#" class="table-block__link  table-block__link_name _link-hover">Sandra Ingram</a>
+											</div>
+											<div class="table-block__item ">
+												<span class="table-block__value table-block__value_data">12.12.2021 - 16:36</span>
+											</div>
+											<div class="table-block__item table-block__item_jc table-block__item_last">
+												<div class="table-block__actions">
+													<a href="#" class="_status _status_no  _status_disabled"></a>
+													<a href="#" class="_status _status_active"></a>
+												</div>
+											</div>
+											<!-- row -->
+										</div>
+										<!-- table-block -->
+									</div>
+									<!-- table-block -->
+								</div>
+								<div class="content-unsubscribe__footer">
+									<div class="_pagging">
+										<ul class="_pagging__list">
+											<li>
+												<a href="#" class="_pagging__arrow _pagging__arrow_prev  button_icon _dark-blue _icon-83"><span tabindex="-1"></span></a>
+											</li>
+											<li>
+												<a href="" class="_pagging__item _dark-blue _body_strong _active">1</a>
+											</li>
+											<li>
+												<a href="" class="_pagging__item _dark-blue _body_strong">2</a>
+											</li>
+											<li>
+												<a href="" class="_pagging__item _dark-blue _body_strong">3</a>
+											</li>
+											<li>
+												<a href="" class="_pagging__item _pagging__item_points _dark-blue _body_strong"><span>...</span></a>
+											</li>
+											<li>
+												<a href="" class="_pagging__item _dark-blue _body_strong">36</a>
+											</li>
+											<li>
+												<a href="#" class="_pagging__arrow _pagging__arrow_next  button_icon _icon-84"><span tabindex="-1"></span></a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- vakil-page__wrapper -->
+					</div>
+					<!-- vakil-page -->
+				</div>
+			</div>
+		</main>
+		@@include('_footer.html',{})
+	</div>
+	@@include('_popup.html',{})
+	@@include('_js.html',{})
+</body>
+
+</html>

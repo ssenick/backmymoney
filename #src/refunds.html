@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('_head.html',{
+"title":"ЛК рядовой пользователь - возвраты"
+})
+
+<body>
+	<div class="wrapper ">
+		@@include('_header-user.html',{})
+		<main class="page ">
+			<div class="page__container">
+				<!-- unsubscribe -->
+				<div class="unsubscribe unsubscribe_refunds _page-p-bottom">
+					<!-- main-profile -->
+					<div class="unsubscribe__main main-profile">
+						<div class="main-profile__bg _ibg">
+							<img src="img/home/04.jpg" alt="">
+							<img src="img/home/04_320-profile.jpg" alt="">
+						</div>
+						<div class="main-profile__container _container-block">
+							<div class="main-profile__content ">
+								<div class="main-profile__avatar ">
+									<img src="img/photo-item.jpg" alt="">
+								</div>
+								<div class="main-profile__body body-main-profile">
+									<div class="body-main-profile__info info-body-profile">
+										<h3 class="info-body-profile__name">Francis Mullins</h3>
+										<a data-da=".main-profile__container,767.98," href="#" class="info-body-profile__button button button_s button_outlined"><span>Добавить сервис</span></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- main-profile -->
+					<!-- ambassador-menu -->
+					<div class="unsubscribe__menu ambassador-menu">
+						<div class="ambassador-menu__container _container-block">
+							<div class="ambassador-menu__body">
+								<button type="button" class="ambassador-menu__button button-ambassador-menu">
+									<span class="button-ambassador-menu__text">Профиль</span>
+									<span class="button-ambassador-menu__burger  button-ambassador-menu__burger_notice"><img src="img/burger-menu.svg" alt=""></span>
+								</button>
+								<div class="ambassador-menu__content">
+									<ul class="ambassador-menu__list">
+										<li class="ambassador-menu__item">
+											<a href="#" class="chips ">
+												<div class="chips__text">Профиль</div>
+											</a>
+										</li>
+										<li class="ambassador-menu__item">
+											<a href="#" class="chips ">
+												<div class="chips__text">Отписки</div>
+												<div class="chips__value">23</div>
+											</a>
+										</li>
+										<li class="ambassador-menu__item">
+											<a href="#" class="chips _active">
+												<div class="chips__text">Возвраты</div>
+												<div class="chips__value">23</div>
+											</a>
+										</li>
+
+									</ul>
+								</div>
+
+							</div>
+
+						</div>
+					</div>
+					<!-- ambassador-menu -->
+					<!-- unsubscribe__section -->
+					<div class="unsubscribe__content content-unsubscribe">
+						<div class="content-unsubscribe__container _container-block">
+							<div class="content-unsubscribe__header">
+								<h5 class="content-unsubscribe__title">Ваши запросы на отписку</h5>
+								<div class="content-unsubscribe__search">
+									@@include('_search-services.html',{})
+								</div>
+							</div>
+							<div class="content-unsubscribe__switcher ">
+								<div class=" switcher">
+									<input id="s_1" data-error="Ошибка" class="switcher__input" type="checkbox" value="1" name="form[]">
+									<label for="s_1" class="switcher__body">
+										<span class="switcher__icon"><span></span></span>
+									</label>
+								</div>
+								<div class="content-unsubscribe__descr _body">
+									Показывать только необработанные запросы
+								</div>
+							</div>
+							<div class="content-unsubscribe__main">
+								<!-- table-refunds-->
+								<div class="table-refunds">
+									<div class="table-refunds__body">
+										<!-- title -->
+										<div class="table-refunds__title">
+											<a href="#" class="table-refunds__sort _sort-item _sort-item_active _dark-blue">Сервис</a>
+										</div>
+										<div class="table-refunds__title">
+											<a href="#" class="table-refunds__sort  _dark-blue">Карта</a>
+										</div>
+										<div class="table-refunds__title">
+											<a href="#" class="table-refunds__sort _dark-blue">Причина возврата</a>
+										</div>
+										<div class="table-refunds__title ">
+											<a href="#" class="table-refunds__sort _sort-item _sort-item_default  _dark-blue">Дата запроса</a>
+										</div>
+										<div class="table-refunds__title ">
+											<a href="#" class="table-refunds__sort  _dark-blue">Статус</a>
+										</div>
+										<div class="table-refunds__title table-refunds__title_last">
+											<a href="#" class="table-refunds__sort  _dark-blue">Действия</a>
+										</div>
+										<!-- title -->
+										<!-- row -->
+										<div class="table-refunds__item table-refunds__item_services">
+											<a href="#" class="table-refunds__services _link-hover">GameSport</a>
+										</div>
+										<div class="table-refunds__item ">
+											<span class="table-refunds__card">4276 25** **** 5689</span>
+										</div>
+										<div class="table-refunds__item ">
+											<span data-tippy-content="Мой ребёнок — дебил! Не, ну представьте — малохольный утырок спёр карту и оплатил сервис! На вас одна надежда, родимые, выручайте!" class="table-refunds__reason">Это дети оформили</span>
+										</div>
+										<div class="table-refunds__item">
+											<span class="table-refunds__data">12.12.2021 - 16:36</span>
+										</div>
+										<div class="table-refunds__item">
+											<span class="table-refunds__status ">Ожидание</span>
+										</div>
+										<div class="table-refunds__item table-refunds__item_status">
+											<a href="#" class="table-refunds__actions _status _status_no"></a>
+										</div>
+										<!-- row -->
+										<!-- row -->
+										<div class="table-refunds__item table-refunds__item_services">
+											<a href="#" class="table-refunds__services _link-hover">GG.BET</a>
+										</div>
+										<div class="table-refunds__item ">
+											<span class="table-refunds__card ">4276 25** **** 5689</span>
+										</div>
+										<div class="table-refunds__item ">
+											<span data-tippy-content="Мой ребёнок — дебил! Не, ну представьте — малохольный утырок спёр карту и оплатил сервис! На вас одна надежда, родимые, выручайте!" class="table-refunds__reason">Мой ребёнок — дебил</span>
+										</div>
+										<div class="table-refunds__item">
+											<span class="table-refunds__data">12.12.2021 - 16:36</span>
+										</div>
+										<div class="table-refunds__item">
+											<span class="table-refunds__status _success">Возврат</span>
+										</div>
+										<div class="table-refunds__item table-refunds__item_status">
+											<a href="#" class="table-refunds__actions _status _status_no _status_disabled"></a>
+										</div>
+										<!-- row -->
+										<!-- row -->
+										<div class="table-refunds__item table-refunds__item_services">
+											<a href="#" class="table-refunds__services _link-hover">AstroTrip</a>
+										</div>
+										<div class="table-refunds__item ">
+											<span class="table-refunds__card">4276 25** **** 5689</span>
+										</div>
+										<div class="table-refunds__item ">
+											<span data-tippy-content="Мошенники!!! На вас одна надежда, родимые, выручайте!" class="table-refunds__reason">Мошенники!!!</span>
+										</div>
+										<div class="table-refunds__item">
+											<span class="table-refunds__data">12.12.2021 - 16:36</span>
+										</div>
+										<div class="table-refunds__item">
+											<span class="table-refunds__status _fail">Отказ</span>
+										</div>
+										<div class="table-refunds__item table-refunds__item_status">
+											<a href="#" class="table-refunds__actions _status _status_no _status_disabled"></a>
+										</div>
+										<!-- row -->
+										<!-- row -->
+										<div class="table-refunds__item table-refunds__item_services">
+											<a href="#" class="table-refunds__services _link-hover">GG.BET</a>
+										</div>
+										<div class="table-refunds__item ">
+											<span class="table-refunds__card ">4276 25** **** 5689</span>
+										</div>
+										<div class="table-refunds__item ">
+											<span data-tippy-content="Мой ребёнок — дебил!  Не, ну представьте — малохольный утырок спёр карту и оплатил сервис! На вас одна надежда, родимые, выручайте!" class="table-refunds__reason">Мой ребёнок — дебил</span>
+										</div>
+										<div class="table-refunds__item">
+											<span class="table-refunds__data">12.12.2021 - 16:36</span>
+										</div>
+										<div class="table-refunds__item">
+											<span class="table-refunds__status _success">Возврат</span>
+										</div>
+										<div class="table-refunds__item table-refunds__item_status">
+											<a href="#" class="table-refunds__actions _status _status_no _status_disabled"></a>
+										</div>
+										<!-- row -->
+										<!-- row -->
+										<div class="table-refunds__item table-refunds__item_services">
+											<a href="#" class="table-refunds__services _link-hover">AstroTrip</a>
+										</div>
+										<div class="table-refunds__item ">
+											<span class="table-refunds__card">4276 25** **** 5689</span>
+										</div>
+										<div class="table-refunds__item ">
+											<span data-tippy-content="Мошенники!!! На вас одна надежда, родимые, выручайте!" class="table-refunds__reason">Мошенники!!!</span>
+										</div>
+										<div class="table-refunds__item">
+											<span class="table-refunds__data">12.12.2021 - 16:36</span>
+										</div>
+										<div class="table-refunds__item">
+											<span class="table-refunds__status _fail">Отказ</span>
+										</div>
+										<div class="table-refunds__item table-refunds__item_status">
+											<a href="#" class="table-refunds__actions _status _status_no _status_disabled"></a>
+										</div>
+										<!-- row -->
+										<!-- row -->
+										<div class="table-refunds__item table-refunds__item_services">
+											<a href="#" class="table-refunds__services _link-hover">GG.BET</a>
+										</div>
+										<div class="table-refunds__item ">
+											<span class="table-refunds__card ">4276 25** **** 5689</span>
+										</div>
+										<div class="table-refunds__item ">
+											<span data-tippy-content="Мой ребёнок — дебил! Не, ну представьте — малохольный утырок спёр карту и оплатил сервис! На вас одна надежда, родимые, выручайте!" class="table-refunds__reason">Мой ребёнок — дебил</span>
+										</div>
+										<div class="table-refunds__item">
+											<span class="table-refunds__data">12.12.2021 - 16:36</span>
+										</div>
+										<div class="table-refunds__item">
+											<span class="table-refunds__status _success">Возврат</span>
+										</div>
+										<div class="table-refunds__item table-refunds__item_status">
+											<a href="#" class="table-refunds__actions _status _status_no _status_disabled"></a>
+										</div>
+										<!-- row -->
+										<!-- row -->
+										<div class="table-refunds__item table-refunds__item_services">
+											<a href="#" class="table-refunds__services _link-hover">AstroTrip</a>
+										</div>
+										<div class="table-refunds__item ">
+											<span class="table-refunds__card">4276 25** **** 5689</span>
+										</div>
+										<div class="table-refunds__item ">
+											<span data-tippy-content="Мошенники!!! На вас одна надежда, родимые, выручайте!" class="table-refunds__reason">Мошенники!!!</span>
+										</div>
+										<div class="table-refunds__item">
+											<span class="table-refunds__data">12.12.2021 - 16:36</span>
+										</div>
+										<div class="table-refunds__item">
+											<span class="table-refunds__status _fail">Отказ</span>
+										</div>
+										<div class="table-refunds__item table-refunds__item_status">
+											<a href="#" class="table-refunds__actions _status _status_no _status_disabled"></a>
+										</div>
+										<!-- row -->
+
+									</div>
+								</div>
+								<!-- table-refunds -->
+							</div>
+							<div class="content-unsubscribe__footer">
+								<div class="_pagging">
+									<ul class="_pagging__list">
+										<li>
+											<a href="#" class="_pagging__arrow _pagging__arrow_prev  button_icon _dark-blue _icon-83"><span tabindex="-1"></span></a>
+										</li>
+										<li>
+											<a href="" class="_pagging__item _dark-blue _body_strong _active">1</a>
+										</li>
+										<li>
+											<a href="" class="_pagging__item _dark-blue _body_strong">2</a>
+										</li>
+										<li>
+											<a href="" class="_pagging__item _dark-blue _body_strong">3</a>
+										</li>
+										<li>
+											<a href="" class="_pagging__item _pagging__item_points _dark-blue _body_strong"><span>...</span></a>
+										</li>
+										<li>
+											<a href="" class="_pagging__item _dark-blue _body_strong">36</a>
+										</li>
+										<li>
+											<a href="#" class="_pagging__arrow _pagging__arrow_next  button_icon _icon-84"><span tabindex="-1"></span></a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- unsubscribe__section -->
+				</div>
+				<!--unsubscribe -->
+			</div>
+		</main>
+		@@include('_footer.html',{})
+	</div>
+	@@include('_popup.html',{})
+	@@include('_js.html',{})
+</body>
+
+</html>

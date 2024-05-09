@@ -1,0 +1,337 @@
+@use "sass:math";
+//<МИКСИНЫ>===============================================================================================
+@import "mixins";
+//</МИКСИНЫ>===============================================================================================
+
+//<ПЕРЕМЕННЫЕ>===========================================================================================================
+$minWidth: 320px;
+$maxWidth: 1920;
+$maxWidthContainer: 1410;
+$md1: $maxWidthContainer - 1;
+$md2: 959.98;
+$md3: 767.98;
+$md4: 479.98;
+%yellow-acc {
+	background: linear-gradient(91.77deg, #ffd600 0.79%, #ffc700 100%);
+}
+%orange {
+	background: linear-gradient(180deg, #ff9900 0%, #ff7a00 100%);
+}
+
+%fill-button {
+	background: linear-gradient(94.6deg, #ff1b2d 2.36%, #df006b 98.71%);
+}
+%gradient-button {
+	background: linear-gradient(265.54deg, #ff1b2d 5.77%, #df006b 95.36%);
+}
+%gradient-button-text {
+	@extend %gradient-button;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+%element-bg {
+	background: linear-gradient(180deg, rgba(3, 14, 27, 0.6) 0%, #041324 0.01%, #030e1b 100%);
+}
+%element-bg-hover {
+	background: linear-gradient(180deg, #030e1b 0%, #041324 100%);
+}
+%hover-gradient {
+	background: linear-gradient(94.6deg, rgba(255, 27, 45, 0.15) 2.36%, rgba(223, 0, 107, 0.15) 98.71%);
+}
+%select-gradient {
+	background: linear-gradient(94.6deg, rgba(255, 27, 45, 0.3) 2.36%, rgba(223, 0, 107, 0.3) 98.71%);
+}
+%stroke-white {
+	border: 1px solid #daecff;
+}
+%stroke-gradient {
+	position: relative;
+	&::before {
+		content: "";
+		background: linear-gradient(265.54deg, #ff1b2d 5.77%, #df006b 95.36%);
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+	}
+	&::after {
+		content: "";
+		position: absolute;
+		width: calc(100% - 2px);
+		height: calc(100% - 2px);
+		top: 1px;
+		left: 1px;
+		z-index: 1;
+		background-color: inherit;
+	}
+	span {
+		position: relative;
+		z-index: 2;
+	}
+}
+//========================================================================================================================================================
+$bg-00: #fafafa;
+$bg-01: #f5f5f5;
+$bg-02: #f3f3f3;
+$bg-03: #dbe3ea;
+$bg-04: #cdd8e2;
+//========================================================================================================================================================
+
+$hover-white: rgba(171, 194, 219, 0.15);
+$select-white: rgba(171, 194, 219, 0.3);
+
+//========================================================================================================================================================
+$white: #fff;
+$black: #000;
+$dark-blue: #00255c;
+$secondary: #485363;
+$link: #0066ff;
+$link-hover: #1900ff;
+$gold: #ffd401;
+$success: #00d008;
+$default-icon: #6c89a9;
+$fail: #d80000;
+//========================================================================================================================================================
+
+//</ПЕРЕМЕННЫЕ>===========================================================================================================
+
+//<ШРИФТЫ>===============================================================================================
+
+//<Подключаем шрифты>=======================================================================================
+//&display=swap&subset=cyrillic-ext
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,300italic,regular,500,600,900&display=swap&subset=cyrillic-ext");
+@import "fonts";
+
+//</Подключаем шрифты>=======================================================================================
+
+//<Иконочные шрифты>==========================================================================================
+@import "icons";
+//</Иконочные шрифты>==========================================================================================
+
+//<Шрифт по умолчанию>==========================================================================================
+$fontFamily: "Montserrat";
+$fontSize: 16;
+//</Шрифт по умолчанию>==========================================================================================
+
+//</ШРИФТЫ>=======================================================================================================
+
+//<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
+@import "null";
+body {
+	color: #000;
+	&._lock {
+		overflow: hidden;
+	}
+}
+//</ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
+
+//<ОБОЛОЧКА>===========================================================================================================
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	&_gray-bg {
+		position: relative;
+		&::after {
+			content: "";
+			position: absolute;
+			width: 1440px;
+			height: 50%;
+			bottom: 0;
+			left: 50%;
+			transform: translate(-50%, 0px);
+			z-index: -1;
+			background-color: $bg-01;
+		}
+	}
+	&._loaded {
+	}
+}
+//</ОБОЛОЧКА>===========================================================================================================
+
+//<ОСНОВНАЯ СЕТКА>===========================================================================================================
+._container {
+	max-width: $maxWidthContainer + px;
+	padding: 0 15px;
+	margin: 0 auto;
+	box-sizing: content-box;
+	@media (max-width: $md3+px) {
+		padding: 0 16px;
+	}
+}
+._container-block {
+	max-width: 1120px;
+	padding: 0 64px;
+	margin: 0 auto;
+	box-sizing: content-box;
+	@media (max-width: $md3+px) {
+		padding: 0 16px;
+	}
+}
+//</ОСНОВНАЯ СЕТКА>===========================================================================================================
+
+//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
+@import "forms";
+@import "ui";
+//</ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
+
+//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
+@import "typography";
+//@import "datepicker";
+//@import "lightgallery";
+//@import "pagging";
+//@import "nouislider";
+//@import "simplebar";
+@import "tippy";
+//@import "comments";
+@import "popup";
+@import "header";
+@import "footer";
+@import "search";
+@import "search-services";
+@import "comments";
+@import "home";
+@import "service-catalog";
+@import "service-page";
+@import "personal-area";
+@import "unsubscribe";
+@import "vakil-page";
+@import "tariff-plans";
+@import "one-time-service";
+@import "table-block.scss";
+@import "tosts.scss";
+
+//</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
+//<ОСНОВНОЙ БЛОК>====================================================================================================
+.page {
+	flex: 1 1 auto;
+
+	// .page__container
+	&__container {
+		max-width: 1440px;
+		margin: 0px auto;
+		&_grey {
+			background-color: $bg-01;
+		}
+	}
+	// .page__body
+	&__body {
+		padding: 0px;
+		min-width: 0;
+		//@include adaptiv-value("", , , );
+		&_7256 {
+			padding: 72px 32px 56px 32px;
+		}
+	}
+}
+
+//========================================================================================================================================================
+.banner-social {
+	display: grid;
+	grid-template-columns: 1fr 320px;
+	gap: 32px;
+	// .banner-social__banner
+	&__banner {
+	}
+	// .banner-social__social
+	&__social {
+	}
+}
+//========================================================================================================================================================
+.breadcrumbs {
+	margin: 0px 0px 16px 0px;
+	@media (max-width: $md2+px) {
+		margin: 0px 0px 8px 0px;
+	}
+	// .breadcrumbs__back
+	&__back {
+	}
+}
+//===================================================================================================================================
+.sidebar {
+	display: grid;
+	grid-row: auto;
+	gap: 32px;
+	&_home-page {
+		@media (max-width: $md1+px) {
+			gap: 24px;
+			grid-template-columns: repeat(12, 1fr);
+			grid-template-rows: auto minmax(114px, auto);
+			grid-template-areas:
+				"top-analysts top-analysts top-analysts top-analysts day-mach day-mach day-mach day-mach top-10-bk top-10-bk top-10-bk top-10-bk"
+				"top-analysts top-analysts top-analysts top-analysts social social social social  top-10-bk top-10-bk top-10-bk top-10-bk ";
+			._content-filter__item {
+				&:not(:last-child) {
+					margin: 0px 8px 0px 0px;
+				}
+				font-size: 11px;
+			}
+			.social {
+				grid-area: social;
+			}
+			.day-mach {
+				grid-area: day-mach;
+				display: flex;
+				flex-direction: column;
+				min-height: 100%;
+				&__body {
+					flex: 1 1 auto;
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+				}
+			}
+			.top-analysts {
+				grid-area: top-analysts;
+				&__header {
+					margin: 0px -20px 16px 0px;
+					gap: 8px;
+				}
+				.top-analyst {
+					grid-template-columns: 15px 40px 1fr auto;
+					padding: 8px 12px;
+				}
+				.top-analyst__value {
+					margin: 0px 0px 0px -10px;
+				}
+				.top-analysts__item {
+					&:not(:last-child) {
+						margin: 0px 0px 9px 0px;
+					}
+				}
+			}
+			.top-10-bk {
+				grid-area: top-10-bk;
+			}
+		}
+		@media (max-width: $md2+px) {
+			grid-template-rows: auto minmax(114px, auto) auto;
+			grid-template-areas:
+				"social social social social social social social social social social social social"
+				"day-mach day-mach day-mach day-mach day-mach day-mach day-mach day-mach day-mach day-mach day-mach day-mach"
+				"top-analysts top-analysts top-analysts top-analysts top-analysts top-analysts top-10-bk top-10-bk top-10-bk top-10-bk top-10-bk top-10-bk";
+		}
+		@media (max-width: $md3+px) {
+			display: flex;
+			flex-direction: column;
+			.day-mach {
+				order: 2;
+			}
+			.social {
+				order: 1;
+			}
+			.tabs-day-mach-top-10-bk {
+				order: 3;
+			}
+		}
+	}
+	// .sidebar__item
+	&__item {
+	}
+}
+
+//</ОСНОВНОЙ БЛОК>====================================================================================================

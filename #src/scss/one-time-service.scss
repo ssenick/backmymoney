@@ -1,0 +1,149 @@
+.one-time-service {
+	// .one-time-service__title
+	&__title {
+		font-weight: 500;
+		font-size: 22px;
+		line-height: 27px;
+		&:not(:last-child) {
+			margin: 0px 0px 24px 0px;
+		}
+	}
+	// .one-time-service__items
+	&__items {
+		display: grid;
+		gap: 24px;
+		@media (max-width:$md3+px){
+			 gap: 8px; 
+		}
+	}
+	// .one-time-service__item
+	&__item {
+	}
+}
+.item-one-time-service {
+	background-color: $bg-00;
+	border: 3px solid $bg-03;
+	box-sizing: border-box;
+	border-radius: 24px;
+	padding: 21px;
+	display: grid;
+	grid-template-columns: 1fr auto;
+	align-items: center;
+	gap: 32px;
+	transition: background-color 0.3s ease 0s;
+	@media (max-width: $md2+px) {
+		grid-template-columns: 1fr;
+	}
+	@media (max-width: $md3+px) {
+		gap: 16px;
+	}
+	// .item-one-time-service__body
+	&__body {
+		display: grid;
+		grid-auto-flow: column;
+		align-items: center;
+		gap: 24px;
+		@media (max-width: $md2+px) {
+			justify-content: start;
+		}
+		@media (max-width: $md3+px) {
+			grid-auto-flow: row;
+
+			gap: 16px;
+			justify-content: stretch;
+		}
+	}
+	// .item-one-time-service__content
+	&__content {
+	}
+	// .item-one-time-service__options
+	&__options {
+	}
+	// .item-one-time-service__actions
+	&__actions {
+	}
+
+	&:hover {
+		background-color: #fff;
+	}
+}
+.content-item-one-time-service {
+	display: grid;
+	gap: 4px;
+	@media (max-width: $md2+px) {
+		gap: 16px;
+	}
+	// .content-item-one-time-service__label
+	&__label {
+	}
+	// .content-item-one-time-service__desc
+	&__desc {
+	}
+}
+
+.options-item-one-time-service {
+	display: grid;
+	grid-auto-flow: column;
+	gap: 24px;
+	@media (max-width: $md3+px) {
+		grid-template-columns: auto 1fr;
+		max-width: 300px;
+		gap: 16px;
+	}
+	// .options-item-one-time-service__item
+	&__item {
+		&:first-child {
+			min-width: 65px;
+		}
+	}
+	// .options-item-one-time-service__label
+	&__label {
+		margin: 0px 0px 4px 0px;
+	}
+	// .options-item-one-time-service__value
+	&__value {
+		min-height: 48px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		@media (max-width: $md3+px) {
+			min-height: 40px;
+		}
+	}
+	// .options-item-one-time-service__quantity
+	&__quantity {
+		@extend .options-item-one-time-service__value;
+	}
+}
+
+.actions-item-one-time-service {
+	@extend .options-item-one-time-service;
+
+	// .actions-item-one-time-service__item
+	&__item {
+		@extend .options-item-one-time-service__item;
+	}
+	// .actions-item-one-time-service__label
+	&__label {
+		@extend .options-item-one-time-service__label;
+	}
+	// .actions-item-one-time-service__value
+	&__value {
+		@extend .options-item-one-time-service__value;
+	}
+	// .actions-item-one-time-service__button
+	&__button {
+		align-self: end;
+	}
+	// .actions-item-one-time-service__btn
+	&__btn {
+		@media (max-width: $md3+px) {
+			width: 100%;
+		}
+	}
+	@media (max-width:$md3+px){
+		  &__value{
+			  min-height: auto;
+		  }
+	}
+}

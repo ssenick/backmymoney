@@ -1,0 +1,578 @@
+//====================================================================================================
+.popup {
+	-webkit-overflow-scrolling: touch;
+	z-index: 100;
+	padding: 30px 10px;
+	position: fixed;
+	top: 0px;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	transition: visibility 0.8s ease 0s;
+	visibility: hidden;
+	&_letter {
+		.popup__body {
+			padding: 0;
+			transform: scale(0);
+			transition: all 0.3s ease 0s;
+			background-color: $bg-01;
+			width: 100%;
+			border: none;
+			box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.06);
+			border-radius: 0;
+		}
+	}
+	&_320 {
+		.popup__body {
+			max-width: 320px;
+		}
+		@media (max-width: $md4+px) {
+			.popup__close {
+				top: 0px;
+				right: 0px;
+				background-color: transparent;
+			}
+		}
+	}
+	&_494 {
+		.popup__body {
+			max-width: 494px;
+		}
+	}
+	&_490 {
+		.popup__body {
+			max-width: 490px;
+		}
+	}
+	&_400 {
+		.popup__body {
+			max-width: 400px;
+		}
+	}
+	&_503 {
+		.popup__body {
+			max-width: 503px;
+		}
+	}
+	&_600 {
+		.popup__body {
+			max-width: 600px;
+		}
+	}
+	&::before {
+		content: "";
+		background-color: rgba(0, 0, 0, 0.9);
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		opacity: 0;
+		transition: opacity 0.8s ease 0s;
+	}
+	&.show {
+		height: 100%;
+		visibility: visible;
+		overflow: auto;
+		&::before {
+			opacity: 1;
+		}
+		.popup__body {
+			transform: scale(1);
+		}
+	}
+	&._active {
+		height: 100%;
+		overflow: auto;
+		visibility: visible;
+		&::before {
+			opacity: 1;
+		}
+		.popup__body {
+			transition: all 0.3s ease 0.2s;
+			transform: scale(1);
+		}
+	}
+	// .popup__content
+	&__content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		min-height: 100%;
+		flex: 1 1 auto;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	// .popup__body
+	&__body {
+		transform: scale(0);
+		transition: all 0.3s ease 0s;
+		background-color: $bg-00;
+		padding: 30px;
+		width: 100%;
+		max-width: 520px;
+		border: 2px solid $bg-03;
+		box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.06);
+		border-radius: 8px;
+
+		@media (max-width: 340px) {
+			padding: 20px;
+		}
+	}
+	// .popup__close
+	&__close {
+		position: absolute;
+		top: -30px;
+		right: -30px;
+		z-index: 30;
+		width: 30px;
+		height: 30px;
+		background-color: #fff;
+		border-radius: 50%;
+		&::before {
+			margin: 0px auto;
+			font-size: 24px;
+			transition: color 0.3s ease 0s;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				color: #000;
+			}
+		}
+	}
+	@media (max-width: 600px) {
+		&__close {
+			top: 0px;
+			right: 0px;
+			background-color: transparent;
+		}
+	}
+}
+//====================================================================================================
+// ====================================================================================================
+.title-popap {
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 22px;
+	letter-spacing: 0.01em;
+	color: $dark-blue;
+	&_small {
+		font-size: 16px;
+	}
+	&_icon {
+		display: flex;
+		align-items: center;
+		&::before {
+			width: 32px;
+			height: 32px;
+			font-size: 32px;
+			color: $success;
+			margin-right: 11px;
+		}
+	}
+}
+.content-popap {
+	display: grid;
+	gap: 24px;
+	// .content-popap__header
+	&__header {
+	}
+	// .content-popap__main
+	&__main {
+		display: grid;
+		gap: 24px;
+	}
+	// .content-popap__footer
+	&__footer {
+	}
+	.input__label {
+		font-size: 14px;
+		line-height: 22px;
+	}
+	.input__line {
+		min-height: 48px;
+	}
+	.input__value {
+		height: 42px;
+		font-size: 16px;
+		line-height: 26px;
+	}
+	.button {
+		font-size: 16px;
+	}
+	.button_outlined {
+		min-height: 48px;
+	}
+	.select__value {
+		min-height: 42px;
+		font-size: 16px;
+		&::after {
+			width: 24px;
+			height: 24px;
+			background: url("../img/icons/select_2.svg") center/10px no-repeat;
+		}
+	}
+	.card-tariff-plans {
+		// .card-tariff-plans__header
+		&__header {
+			min-height: 66px;
+		}
+		// .card-tariff-plans__title
+		&__title {
+			font-size: 28px;
+			line-height: 34px;
+		}
+		// .card-tariff-plans__main
+		&__main {
+			padding: 24px;
+		}
+		// .card-tariff-plans__item
+		&__item {
+			padding: 4px 16px;
+		}
+		// .card-tariff-plans__name
+		&__name {
+			font-size: 16px;
+		}
+
+		// .card-tariff-plans__value
+		&__value {
+			font-size: 16px;
+		}
+	}
+	.footer-card-tariff-plans {
+		// .footer-card-tariff-plans__rate
+		&__rate {
+			font-size: 20px;
+		}
+		&__link {
+			font-size: 16px;
+		}
+	}
+	@media (max-width: 550px) {
+		.card-tariff-plans {
+			margin: 0px -15px;
+			// .card-tariff-plans__header
+			&__header {
+				min-height: 60px;
+			}
+			// .card-tariff-plans__title
+			&__title {
+				line-height: 28px;
+				font-size: 20px;
+			}
+			// .card-tariff-plans__main
+			&__main {
+				padding: 16px 12px;
+			}
+			// .card-tariff-plans__item
+			&__item {
+				padding: 5px 16px;
+			}
+			// .card-tariff-plans__name
+			&__name {
+				font-size: 14px;
+			}
+			// .card-tariff-plans__value
+			&__value {
+				font-size: 14px;
+			}
+		}
+		.footer-card-tariff-plans {
+			&__rate {
+				font-size: 18px;
+			}
+			// .footer-card-tariff-plans__link
+			&__link {
+				font-size: 14px;
+			}
+		}
+	}
+	@media (max-width: $md4+px) {
+		.input__info {
+			font-size: 11px;
+		}
+	}
+}
+
+.registration-general-popup {
+	display: grid;
+	gap: 24px;
+	// .registration-general-popup__buttons
+	&__buttons {
+		display: grid;
+		gap: 24px;
+	}
+	// .registration-general-popup__method
+	&__method {
+	}
+	// .registration-general-popup__footer
+	&__footer {
+	}
+	// .registration-general-popup__button
+	&__button {
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 22px;
+	}
+}
+.method-button {
+	background-color: #fff;
+	border-radius: 34px;
+	display: flex;
+	align-items: center;
+	padding: 8px;
+	border: 2px solid transparent;
+	transition: border 0.3s ease 0s;
+	min-height: 48px;
+	&._active {
+		border: 2px solid $bg-03;
+	}
+	// .method-button__image
+	&__image {
+		flex: 0 0 24px;
+		width: 24px;
+		height: 24px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		img {
+			max-width: 100%;
+			max-height: 100%;
+			object-fit: cover;
+		}
+	}
+	// .method-button__name
+	&__name {
+		font-weight: 300;
+		font-size: 16px;
+		line-height: 26px;
+		margin-left: 8px;
+		color: $dark-blue;
+	}
+}
+//========================================================================================================================================================
+.registration-form {
+	// .registration-form__body
+	&__body {
+		display: grid;
+		gap: 24px;
+	}
+	&__block {
+		display: grid;
+		gap: 24px;
+		padding: 0px 0px 24px 0px;
+		border-bottom: 1px solid $bg-04;
+	}
+	&__label-block {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		> * {
+			&:first-child {
+				margin: 0px 20px 0px 0px;
+			}
+		}
+	}
+	// .registration-form__descr
+	&__descr {
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 22px;
+		color: $secondary;
+		text-align: center;
+		display: flex;
+		align-items: center;
+		&::after,
+		&::before {
+			content: "";
+			display: block;
+			width: 13px;
+			height: 1px;
+			background-color: $bg-04;
+		}
+		&::after {
+			margin-left: 5px;
+		}
+		&::before {
+			margin-right: 5px;
+		}
+	}
+	// .registration-form__text
+	&__text {
+		font-weight: 300;
+		font-size: 16px;
+		line-height: 26px;
+		text-align: center;
+		&_left {
+			text-align: left;
+		}
+		&_small {
+			font-size: 14px;
+			line-height: math.div(22px, 14px) * 100%;
+		}
+	}
+	&__add {
+		position: relative;
+		.registration-form__input {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			opacity: 0;
+			cursor: pointer;
+			font-size: 0;
+			z-index: 2;
+		}
+		span {
+			display: flex;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				.button_outlined {
+					&:not(:disabled) {
+						background: linear-gradient(360deg, #ff9900 0%, #ff7a00 100%);
+					}
+				}
+			}
+		}
+	}
+	&__btn-socials {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 11px;
+		.registration-form__label {
+			grid-column: span 2;
+		}
+		@media (max-width: 550px) {
+			grid-template-columns: 1fr;
+			.registration-form__label {
+				grid-column: span 1;
+			}
+		}
+	}
+	&__label {
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 20px;
+	}
+	&__value {
+		font-weight: 500;
+		font-size: 22px;
+		line-height: math.div(27px, 22px) * 100%;
+		white-space: nowrap;
+		br {
+			display: none;
+		}
+	}
+	// .registration-form__input
+	&__input {
+	}
+	// .registration-form__button
+	&__button {
+	}
+	&__links {
+		display: grid;
+		gap: 16px;
+		padding: 16px 0px 0px 0px;
+		justify-content: center;
+	}
+	// .registration-form__link
+	&__link {
+		text-align: center;
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 22px;
+		&_left {
+			text-align: left;
+		}
+	}
+	@media (max-width: $md3+px) {
+		&__value {
+			br {
+				display: block;
+			}
+		}
+		.card-tariff-plans {
+			.footer-card-tariff-plans__select {
+				.input {
+					.select__value {
+						small {
+							line-height: 162%;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.info-card {
+	display: grid;
+	gap: 18px;
+	// .info-card__logo
+	&__logo {
+		justify-self: center;
+		background-color: #fff;
+		overflow: hidden;
+		border-radius: 20px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 24px;
+		img {
+			max-width: 100%;
+			max-height: 100%;
+			object-fit: cover;
+		}
+	}
+	// .info-card__footer
+	&__footer {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	// .info-card__rating
+	&__rating {
+		margin-right: 15px;
+	}
+	// .info-card__social-info
+	&__social-info {
+	}
+}
+//========================================================================================================================================================
+
+.letter-content {
+	// .letter-content__header
+	&__header {
+		min-height: 49px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: #fff;
+	}
+	// .letter-content__label
+	&__label {
+	}
+	// .letter-content__main
+	&__main {
+	}
+	// .letter-content__block
+	&__block {
+	}
+	// .letter-content__title
+	&__title {
+	}
+	// .letter-content__text
+	&__text {
+	}
+	// .letter-content__big-text
+	&__big-text {
+	}
+	// .letter-content__button
+	&__button {
+	}
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('_head.html',{
+"title":"Страница оплаты, выбор тарифа или произвольная сумма"
+})
+
+<body>
+	<div class="wrapper ">
+		@@include('_header-user.html',{})
+		<main class="page ">
+			<div class="page__container">
+				<!-- vakil-page -->
+				<div class="vakil-page vakil-page_profile _page-p-bottom">
+					<!-- main-profile -->
+					<div class="vakil-page__section main-profile">
+						<div class="main-profile__bg _ibg">
+							<img src="img/home/04.jpg" alt="">
+							<img src="img/home/04_320-profile.jpg" alt="">
+						</div>
+						<div class="main-profile__container _container-block">
+							<div class="main-profile__content ">
+								<div class="main-profile__avatar ">
+									<img src="img/photo-item.jpg" alt="">
+								</div>
+								<div class="main-profile__body body-main-profile body-main-profile_full">
+									<div class="body-main-profile__info info-body-profile">
+										<h3 class="info-body-profile__name">Francis Mullins</h3>
+										<div data-da=".main-profile__container,959.98," class="info-body-profile__about about-info-body-profile">
+											<div class="about-info-body-profile__icon _icon-63"></div>
+											<div class="about-info-body-profile__content">
+												<div class="about-info-body-profile__text">Представитель <a href="#" class="_link-hover">GameSport</a></div>
+												<div class="about-info-body-profile__text">Тариф GOLD до 12.12.2021 <a href="#" class="_link-hover">Продлить</a></div>
+											</div>
+										</div>
+									</div>
+									<div data-da=".info-body-profile,959.98," class="body-main-profile__balance balance-main-profile">
+										<div class="balance-main-profile__label _caption">Баланс:</div>
+										<div class="balance-main-profile__body">
+											<div class="balance-main-profile__value">23 000 ₽</div>
+											<a href="" class="balance-main-profile__replenish "><span>Пополнить</span><span class="_icon-50"></span></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- main-profile -->
+					<!-- ambassador-menu -->
+					<div class="vakil-page__section ambassador-menu">
+						<div class="ambassador-menu__container _container-block">
+							<div class="ambassador-menu__body">
+								<button type="button" class="ambassador-menu__button button-ambassador-menu">
+									<span class="button-ambassador-menu__text">Профиль</span>
+									<span class="button-ambassador-menu__burger  button-ambassador-menu__burger_notice"><img src="img/burger-menu.svg" alt=""></span>
+								</button>
+								<div class="ambassador-menu__content">
+									<ul class="ambassador-menu__list">
+										<li class="ambassador-menu__item">
+											<a href="#" class="chips _active">
+												<div class="chips__text">Профиль</div>
+											</a>
+										</li>
+										<li class="ambassador-menu__item">
+											<a href="#" class="chips ">
+												<div class="chips__text">Команда</div>
+											</a>
+										</li>
+										<li class="ambassador-menu__item">
+											<a href="#" class="chips">
+												<div class="chips__text">Отписки</div>
+												<div class="chips__value">23</div>
+											</a>
+										</li>
+										<li class="ambassador-menu__item">
+											<a href="#" class="chips ">
+												<div class="chips__text">Возвраты</div>
+												<div class="chips__value">23</div>
+											</a>
+										</li>
+										<li class="ambassador-menu__item">
+											<a href="#" class="chips ">
+												<div class="chips__text">Чат</div>
+											</a>
+										</li>
+										<li class="ambassador-menu__item">
+											<a href="#" class="chips">
+												<div class="chips__text">Отзывы</div>
+												<div class="chips__value">23</div>
+											</a>
+										</li>
+										<li class="ambassador-menu__item">
+											<a href="#" class="chips">
+												<div class="chips__text">Кнопка</div>
+											</a>
+										</li>
+									</ul>
+								</div>
+
+							</div>
+
+						</div>
+					</div>
+					<!-- ambassador-menu -->
+					<!-- vakil-page__top -->
+
+					<!-- vakil-page__top -->
+					<!-- vakil-page__wrapper -->
+					<div class="vakil-page__wrapper">
+						<!-- replenish-account -->
+						<div class="vakil-page__section replenish-account">
+							<div class="replenish-account__container _container-block">
+								<h5 class="replenish-account__title vakil-page__title">Поплнение счёта аккаунта на произвольную сумму</h5>
+								<form action="#" class="replenish-account__form form-replenish-account">
+									<div class=" form-replenish-account__input  input">
+										<label for="pop_1" class="input__label">Сумма пополнения</label>
+										<div class="input__line _selected ">
+											<input id="pop_1" autocomplete="off" type="text" name="form[]" data-error="Ошибка" data-value="" value="3000 ₽" class="input__value _selected _req">
+										</div>
+									</div>
+									<button type="submit" class=" form-replenish-account__button button button_xs button_contained "><span>Далее</span></button>
+								</form>
+							</div>
+						</div>
+						<!-- replenish-account -->
+						<div class="vakil-page__section">
+							<!-- tariff-plans -->
+							@@include('_tariff-plans.html',{
+							"title":"Покупка тарифного плана"
+							})
+							<!-- tariff-plans -->
+						</div>
+					</div>
+					<!-- vakil-page__wrapper -->
+				</div>
+				<!-- vakil-page -->
+			</div>
+		</main>
+		@@include('_footer.html',{})
+	</div>
+	@@include('_popup.html',{})
+	@@include('_js.html',{})
+</body>
+
+</html>
