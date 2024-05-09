@@ -5,7 +5,7 @@ DEMO: https://backmymoney.ssenick.fun/
 # Project Description: Modern Website Development
 
 ## Overview
-I developed a dynamic website using HTML, SCSS, and JavaScript, focusing on front-end development to create an engaging user experience. Leveraging various third-party JavaScript libraries, I incorporated pre-built functionality to enhance the website's features and streamline development.
+`I developed a dynamic website using HTML, SCSS, and JavaScript, focusing on front-end development to create an engaging user experience. Leveraging various third-party JavaScript libraries, I incorporated pre-built functionality to enhance the website's features and streamline development.`
 
 ## Technologies Used
 HTML: Utilized for structuring the website's content.
